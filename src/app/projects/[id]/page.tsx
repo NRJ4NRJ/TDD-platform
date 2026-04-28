@@ -4,6 +4,22 @@ import Link from "next/link";
 import RiskBadge from "@/components/RiskBadge";
 import type { RiskRating } from "@/types/database";
 
+type RiskItem = {
+  id: string;
+  title: string;
+  rating: string;
+  description: string | null;
+};
+
+type Assessment = {
+  id: string;
+  rating: string;
+  summary: string | null;
+  category_id: string;
+  risk_categories: { name: string; display_order: number } | null;
+  risk_items: RiskItem[];
+};
+
 const ratingDotClass: Record<RiskRating, string> = {
   green: "bg-green-500",
   blue: "bg-blue-500",
@@ -12,7 +28,7 @@ const ratingDotClass: Record<RiskRating, string> = {
   red: "bg-red-500",
 };
 
-const typeLabels = {
+const typeLabels: Record<string, string> = {
   wind: "Éolien",
   solar: "Solaire PV",
   hydro: "Hydraulique",
@@ -20,7 +36,7 @@ const typeLabels = {
   other: "Autre",
 };
 
-const statusLabels = {
+const statusLabels: Record<string, string> = {
   development: "Développement",
   construction: "Construction",
   operation: "Exploitation",
@@ -42,24 +58,24 @@ export default async function ProjectDetailPage({
 
   if (!project) notFound();
 
-  const { data: assessments } = await supabase
+  const { data: rawAssessments } = await supabase
     .from("risk_assessments")
     .select(
-      `
-      id, rating, summary, category_id,
-      risk_categories (name, display_order),
-      risk_items (id, title, rating, description)
-    `
+      `id, rating, summary, category_id,
+       risk_categories (name, display_order),
+       risk_items (id, title, rating, description)`
     )
     .eq("project_id", id)
     .order("display_order", { referencedTable: "risk_categories" });
+
+  const assessments = (rawAssessments ?? []) as Assessment[];
 
   const { data: categories } = await supabase
     .from("risk_categories")
     .select("*")
     .order("display_order");
 
-  const assessedIds = new Set(assessments?.map((a) => a.category_id) ?? []);
+  const assessedIds = new Set(assessments.map((a) => a.category_id));
   const missingCategories =
     categories?.filter((c) => !assessedIds.has(c.id)) ?? [];
 
@@ -78,11 +94,11 @@ export default async function ProjectDetailPage({
             {project.name}
           </h1>
           <p className="text-sm text-slate-500 mt-0.5">
-            {typeLabels[project.type as keyof typeof typeLabels]}
+            {typeLabels[project.type] ?? project.type}
             {project.capacity_mw ? ` · ${project.capacity_mw} MW` : ""}
             {project.location ? ` · ${project.location}` : ""}
             {" · "}
-            {statusLabels[project.status as keyof typeof statusLabels]}
+            {statusLabels[project.status] ?? project.status}
           </p>
         </div>
       </div>
@@ -95,7 +111,7 @@ export default async function ProjectDetailPage({
         {categories && categories.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {categories.map((cat) => {
-              const assessment = assessments?.find(
+              const assessment = assessments.find(
                 (a) => a.category_id === cat.id
               );
               const rating = assessment?.rating as RiskRating | undefined;
@@ -127,60 +143,49 @@ export default async function ProjectDetailPage({
           Détail par catégorie
         </h2>
 
-        {assessments && assessments.length > 0 ? (
-          assessments.map((assessment) => {
-            const catName =
-              (assessment.risk_categories as { name: string } | null)?.name ??
-              "—";
-            return (
-              <div
-                key={assessment.id}
-                className="bg-white rounded-xl border border-slate-200 p-5 space-y-3"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-slate-800">{catName}</h3>
-                  <RiskBadge rating={assessment.rating as RiskRating} />
-                </div>
-                {assessment.summary && (
-                  <p className="text-sm text-slate-600">{assessment.summary}</p>
-                )}
-                {Array.isArray(assessment.risk_items) &&
-                  assessment.risk_items.length > 0 && (
-                    <div className="space-y-2 pt-2 border-t border-slate-100">
-                      {(
-                        assessment.risk_items as {
-                          id: string;
-                          title: string;
-                          rating: string;
-                          description: string | null;
-                        }[]
-                      ).map((item) => (
-                        <div
-                          key={item.id}
-                          className="flex items-start gap-2.5 text-sm"
-                        >
-                          <div
-                            className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
-                              ratingDotClass[item.rating as RiskRating]
-                            }`}
-                          />
-                          <div>
-                            <span className="font-medium text-slate-700">
-                              {item.title}
-                            </span>
-                            {item.description && (
-                              <p className="text-slate-500 text-xs mt-0.5">
-                                {item.description}
-                              </p>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+        {assessments.length > 0 ? (
+          assessments.map((assessment) => (
+            <div
+              key={assessment.id}
+              className="bg-white rounded-xl border border-slate-200 p-5 space-y-3"
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="font-semibold text-slate-800">
+                  {assessment.risk_categories?.name ?? "—"}
+                </h3>
+                <RiskBadge rating={assessment.rating as RiskRating} />
               </div>
-            );
-          })
+              {assessment.summary && (
+                <p className="text-sm text-slate-600">{assessment.summary}</p>
+              )}
+              {assessment.risk_items.length > 0 && (
+                <div className="space-y-2 pt-2 border-t border-slate-100">
+                  {assessment.risk_items.map((item) => (
+                    <div
+                      key={item.id}
+                      className="flex items-start gap-2.5 text-sm"
+                    >
+                      <div
+                        className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
+                          ratingDotClass[item.rating as RiskRating]
+                        }`}
+                      />
+                      <div>
+                        <span className="font-medium text-slate-700">
+                          {item.title}
+                        </span>
+                        {item.description && (
+                          <p className="text-slate-500 text-xs mt-0.5">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))
         ) : (
           <div className="text-center py-12 text-slate-400">
             <p className="text-sm">Aucune analyse de risques saisie.</p>
