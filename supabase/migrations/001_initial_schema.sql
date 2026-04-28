@@ -3,7 +3,18 @@
 -- Renewable energy project risk assessment platform
 -- ============================================================
 
--- Enums (drop first to allow re-run)
+-- Drop everything to allow re-run
+-- auth.users trigger must be dropped explicitly (table not dropped by cascade)
+drop trigger if exists on_auth_user_created on auth.users;
+-- Tables dropped with CASCADE — removes dependent triggers and policies automatically
+drop table if exists public.risk_items cascade;
+drop table if exists public.risk_assessments cascade;
+drop table if exists public.risk_categories cascade;
+drop table if exists public.projects cascade;
+drop table if exists public.profiles cascade;
+-- Functions and types dropped after tables
+drop function if exists public.handle_new_user();
+drop function if exists public.set_updated_at();
 drop type if exists public.risk_rating cascade;
 drop type if exists public.project_type cascade;
 drop type if exists public.project_status cascade;
