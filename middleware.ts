@@ -20,10 +20,6 @@ export async function middleware(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet: { name: string; value: string; options: CookieOptions }[]) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
-          supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           );
@@ -37,8 +33,9 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const isAuthPage = request.nextUrl.pathname.startsWith("/login");
+  const isAuthCallback = request.nextUrl.pathname === "/auth/callback";
   const isPublicPage =
-    request.nextUrl.pathname === "/" || isAuthPage;
+    request.nextUrl.pathname === "/" || isAuthPage || isAuthCallback;
 
   if (!user && !isPublicPage) {
     const url = request.nextUrl.clone();
