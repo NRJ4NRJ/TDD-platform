@@ -56,19 +56,33 @@ export default async function ProjectsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">Portefeuille</h1>
           <p className="text-sm text-slate-500 mt-1">
             {projects.length} projet{projects.length > 1 ? "s" : ""}
           </p>
         </div>
-        <Link
-          href="/projects/new"
-          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
-        >
-          + Nouveau projet
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/report"
+            className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+          >
+            Explorer le rapport Excel
+          </Link>
+          <Link
+            href="/projects/import"
+            className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+          >
+            Importer rapport Excel
+          </Link>
+          <Link
+            href="/projects/new"
+            className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+          >
+            + Nouveau projet
+          </Link>
+        </div>
       </div>
 
       {projects.length === 0 && (

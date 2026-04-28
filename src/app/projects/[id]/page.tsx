@@ -49,12 +49,8 @@ const statusLabels: Record<string, string> = {
   operation: "Exploitation",
 };
 
-export default async function ProjectDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const { id } = params;
+export default async function ProjectDetailPage(props: any) {
+  const { id } = props.params as { id: string };
   const supabase = await createClient();
 
   const { data: project } = await supabase
@@ -75,7 +71,7 @@ export default async function ProjectDetailPage({
     .eq("project_id", id)
     .order("display_order", { referencedTable: "risk_categories" });
 
-  const assessments = (rawAssessments ?? []) as Assessment[];
+  const assessments = (rawAssessments ?? []) as unknown as Assessment[];
 
   const { data: rawCategories } = await supabase
     .from("risk_categories")

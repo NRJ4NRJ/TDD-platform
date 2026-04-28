@@ -21,9 +21,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ReportSheetPage({ params }: { params: { sheet: string } }) {
+export default function ReportSheetPage(props: any) {
   const typedReport = report as ImportedReport;
-  const sheetName = decodeURIComponent(params.sheet);
+  const sheetName = decodeURIComponent(props.params.sheet as string);
   const isKnownSheet = typedReport.sheet_names.includes(sheetName);
 
   if (!isKnownSheet) {
