@@ -3,7 +3,18 @@ import Link from "next/link";
 import RiskBadge from "@/components/RiskBadge";
 import type { RiskRating } from "@/types/database";
 
-const typeLabels = {
+type ProjectRow = {
+  id: string;
+  name: string;
+  type: string;
+  capacity_mw: number | null;
+  location: string | null;
+  status: string;
+  created_at: string;
+  risk_assessments: { rating: string }[];
+};
+
+const typeLabels: Record<string, string> = {
   wind: "Éolien",
   solar: "Solaire",
   hydro: "Hydraulique",
@@ -11,23 +22,26 @@ const typeLabels = {
   other: "Autre",
 };
 
-const statusLabels = {
+const statusLabels: Record<string, string> = {
   development: "Développement",
   construction: "Construction",
   operation: "Exploitation",
 };
 
+function worstRating(assessments: { rating: string }[]): RiskRating | null {
+  const order: RiskRating[] = ["red", "orange", "yellow", "blue", "green"];
+  for (const level of order) {
+    if (assessments.some((a) => a.rating === level)) return level;
+  }
+  return null;
+}
+
 export default async function ProjectsPage() {
   const supabase = await createClient();
 
-  const { data: projects, error } = await supabase
+  const { data: raw, error } = await supabase
     .from("projects")
-    .select(
-      `
-      id, name, type, capacity_mw, location, status, created_at,
-      risk_assessments (rating)
-    `
-    )
+    .select("id, name, type, capacity_mw, location, status, created_at, risk_assessments (rating)")
     .order("created_at", { ascending: false });
 
   if (error) {
@@ -38,15 +52,7 @@ export default async function ProjectsPage() {
     );
   }
 
-  function worstRating(
-    assessments: { rating: string }[]
-  ): RiskRating | null {
-    const order: RiskRating[] = ["red", "orange", "yellow", "blue", "green"];
-    for (const level of order) {
-      if (assessments.some((a) => a.rating === level)) return level;
-    }
-    return null;
-  }
+  const projects = (raw ?? []) as ProjectRow[];
 
   return (
     <div className="space-y-6">
@@ -54,8 +60,7 @@ export default async function ProjectsPage() {
         <div>
           <h1 className="text-2xl font-bold text-slate-900">Portefeuille</h1>
           <p className="text-sm text-slate-500 mt-1">
-            {projects?.length ?? 0} projet
-            {(projects?.length ?? 0) > 1 ? "s" : ""}
+            {projects.length} projet{projects.length > 1 ? "s" : ""}
           </p>
         </div>
         <Link
@@ -66,7 +71,7 @@ export default async function ProjectsPage() {
         </Link>
       </div>
 
-      {projects && projects.length === 0 && (
+      {projects.length === 0 && (
         <div className="text-center py-20 text-slate-400">
           <p className="text-lg font-medium">Aucun projet</p>
           <p className="text-sm mt-1">
@@ -76,8 +81,8 @@ export default async function ProjectsPage() {
       )}
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {projects?.map((project) => {
-          const worst = worstRating(project.risk_assessments ?? []);
+        {projects.map((project) => {
+          const worst = worstRating(project.risk_assessments);
           return (
             <Link
               key={project.id}
@@ -90,7 +95,7 @@ export default async function ProjectsPage() {
                     {project.name}
                   </h2>
                   <p className="text-xs text-slate-500 mt-0.5">
-                    {typeLabels[project.type]}
+                    {typeLabels[project.type] ?? project.type}
                     {project.capacity_mw ? ` · ${project.capacity_mw} MW` : ""}
                     {project.location ? ` · ${project.location}` : ""}
                   </p>
@@ -99,10 +104,10 @@ export default async function ProjectsPage() {
               </div>
               <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                 <span className="text-xs text-slate-400">
-                  {statusLabels[project.status]}
+                  {statusLabels[project.status] ?? project.status}
                 </span>
                 <span className="text-xs text-slate-400">
-                  {project.risk_assessments?.length ?? 0} / 7 catégories
+                  {project.risk_assessments.length} / 7 catégories
                 </span>
               </div>
             </Link>
