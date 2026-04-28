@@ -1,14 +1,11 @@
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { env } from "@/lib/env";
-import type { Database } from "@/types/database";
-
-type DB = Omit<Database, "__InternalSupabase">;
 
 export async function createClient() {
   const cookieStore = await cookies();
 
-  return createServerClient<DB>(
+  return createServerClient(
     env.supabaseUrl,
     env.supabaseAnonKey,
     {
