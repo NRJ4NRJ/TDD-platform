@@ -4,6 +4,13 @@ import Link from "next/link";
 import RiskBadge from "@/components/RiskBadge";
 import type { RiskRating } from "@/types/database";
 
+type Category = {
+  id: string;
+  name: string;
+  description: string | null;
+  display_order: number;
+};
+
 type RiskItem = {
   id: string;
   title: string;
@@ -70,14 +77,15 @@ export default async function ProjectDetailPage({
 
   const assessments = (rawAssessments ?? []) as Assessment[];
 
-  const { data: categories } = await supabase
+  const { data: rawCategories } = await supabase
     .from("risk_categories")
     .select("*")
     .order("display_order");
 
+  const categories = (rawCategories ?? []) as Category[];
+
   const assessedIds = new Set(assessments.map((a) => a.category_id));
-  const missingCategories =
-    categories?.filter((c) => !assessedIds.has(c.id)) ?? [];
+  const missingCategories = categories.filter((c) => !assessedIds.has(c.id));
 
   return (
     <div className="space-y-6">

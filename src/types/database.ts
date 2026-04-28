@@ -126,8 +126,8 @@ export interface Database {
         };
       };
     };
-    Views: Record<string, never>;
-    Functions: Record<string, never>;
+    Views: Record<string, unknown>;
+    Functions: Record<string, unknown>;
     Enums: {
       risk_rating: RiskRating;
       project_type: ProjectType;

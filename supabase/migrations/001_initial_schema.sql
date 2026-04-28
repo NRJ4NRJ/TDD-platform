@@ -3,7 +3,11 @@
 -- Renewable energy project risk assessment platform
 -- ============================================================
 
--- Enums
+-- Enums (drop first to allow re-run)
+drop type if exists public.risk_rating cascade;
+drop type if exists public.project_type cascade;
+drop type if exists public.project_status cascade;
+
 create type public.risk_rating as enum ('green', 'blue', 'yellow', 'orange', 'red');
 create type public.project_type as enum ('wind', 'solar', 'hydro', 'storage', 'other');
 create type public.project_status as enum ('development', 'construction', 'operation');
