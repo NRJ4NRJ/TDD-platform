@@ -36,6 +36,9 @@ yarn-error.log*
 # supabase CLI temp files
 /supabase/.temp/
 
+# local Excel report
+20260319_TDD_Projet Mimosa_Vinterne (1).xlsx
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

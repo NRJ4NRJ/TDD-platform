@@ -1,0 +1,1721 @@
+{
+  "source_file": "20260319_TDD_Projet Mimosa_Vinterne (1).xlsx",
+  "sheet_names": [
+    "Page de garde",
+    "Accueil",
+    "Executive summary",
+    "1. Permitting",
+    "2. Design",
+    "3. Raccordement",
+    "4. AO CRE",
+    "5. FM ",
+    "6. EYAr",
+    "7. Additional docs",
+    "Figures"
+  ],
+  "project_metadata": {
+    "General": "La Haute Voie",
+    "spv": "Parc éolien de la Haute Voie",
+    "name": "La Haute Voie",
+    "commune": "Loisy-sur-Marne / Maisons-en-Champagne",
+    "department": "Marne",
+    "region": "Grand Est",
+    "country": "France",
+    "project_status": "RTB",
+    "Turbines": "Vestas V150/V163",
+    "Puissance totale": "18 MW",
+    "Ref": "Commentaire / Risque / Stratégie de mitigation"
+  },
+  "sections": [
+    {
+      "sheet_name": "1. Permitting",
+      "rows": [
+        {
+          "Ref": "1",
+          "Subject": "Autorisations",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 1,
+          "Sub-subject": "Historique",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 2,
+          "Sub-subject": "Installation autorisée",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 3,
+          "Sub-subject": "Mesures",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 1,
+          "Subject": 4,
+          "Sub-subject": "Etudes d'impact",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": "Contrat d'achat",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 1,
+          "Sub-subject": "Général",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 2,
+          "Sub-subject": "Type",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 3,
+          "Sub-subject": "Installation",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 4,
+          "Sub-subject": "Tarif",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 5,
+          "Sub-subject": "Plafond (P)",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 6,
+          "Sub-subject": "Adjudication",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 7,
+          "Sub-subject": "Date de démarrage",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 8,
+          "Sub-subject": "Durée",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 9,
+          "Sub-subject": "Termes",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": "Aggregation agreement",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 1,
+          "Sub-subject": "Général",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": "Grid connection",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 1,
+          "Sub-subject": "Général",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 2,
+          "Sub-subject": "Conditions techniques",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 3,
+          "Sub-subject": "Conditions financières",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 4,
+          "Sub-subject": "Délai",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 5,
+          "Sub-subject": "Limitations en injection / Bridages",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        }
+      ]
+    },
+    {
+      "sheet_name": "2. Design",
+      "rows": [
+        {
+          "Ref": 2,
+          "Subject": "Revue technologique",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 1,
+          "Sub-subject": "Modèle de turbines",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 2,
+          "Sub-subject": "Certification",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 3,
+          "Sub-subject": "Courbe de puissance & modes bridés",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 4,
+          "Sub-subject": "Conformité au grid code",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 5,
+          "Sub-subject": "Description technique",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 6,
+          "Sub-subject": "Conditions opérationnelles",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 7,
+          "Sub-subject": "Système SCADA",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 8,
+          "Sub-subject": "Condition monitoring system",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 9,
+          "Sub-subject": "Track record",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 10,
+          "Sub-subject": "Problèmes connus / retour d'expérience opérationnel",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": "Compatibilité aux conditions de vent du site",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 1,
+          "Sub-subject": "Type certificate",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 2,
+          "Sub-subject": "TSA",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 3,
+          "Sub-subject": "Site assessment",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 4,
+          "Sub-subject": "Divers",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": "Revue du design des fondations",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 1,
+          "Sub-subject": "Général",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 2,
+          "Sub-subject": "Principales caractéristiques géotechniques",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 3,
+          "Sub-subject": "Principales dimensions des fondations",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 3,
+          "Sub-subject": "Divers",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": "Revue du design des accès",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 1,
+          "Sub-subject": "Accès distant",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 2,
+          "Sub-subject": "Sur site",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": "Revue du design électrique",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 2,
+          "Subject": 1,
+          "Sub-subject": "Général",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        }
+      ]
+    },
+    {
+      "sheet_name": "3. Raccordement",
+      "rows": [
+        {
+          "Ref": "1",
+          "Subject": "Grid connection",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 1,
+          "Sub-subject": "Général",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 2,
+          "Sub-subject": "Capacités potentielles",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "1",
+          "Subject": 3,
+          "Sub-subject": "Conditions techniques",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 1,
+          "Subject": 4,
+          "Sub-subject": "Conditions financières",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 1,
+          "Subject": 5,
+          "Sub-subject": "Délai",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": 1,
+          "Subject": 6,
+          "Sub-subject": "Limitations en injection / Bridages",
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        }
+      ]
+    },
+    {
+      "sheet_name": "4. AO CRE",
+      "rows": [
+        {
+          "Ref": "4",
+          "Subject": "AO CRE",
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "4",
+          "Subject": 1,
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "4",
+          "Subject": 2,
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "4",
+          "Subject": 3,
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "4",
+          "Subject": 4,
+          "Sub-subject": null,
+          "Description": null,
+          "Document": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        }
+      ]
+    },
+    {
+      "sheet_name": "5. FM ",
+      "rows": [
+        {
+          "Ref": "5",
+          "Subject": "Timing",
+          "Sub-subject": null,
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 1,
+          "Sub-subject": "Construction start date",
+          "Input": null,
+          "Unit": "Date",
+          "Category": "v",
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 2,
+          "Sub-subject": "Construction period",
+          "Input": null,
+          "Unit": "Mths",
+          "Category": "j",
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 3,
+          "Sub-subject": "Completion date (COD)",
+          "Input": null,
+          "Unit": "Date",
+          "Category": "b",
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 4,
+          "Sub-subject": "Operation period",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": "o",
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 5,
+          "Sub-subject": "Availability period 1",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": "r",
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 6,
+          "Sub-subject": "Availability period 2",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 7,
+          "Sub-subject": "PPA",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 8,
+          "Sub-subject": "O&M Period 1",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 9,
+          "Sub-subject": "O&M Period 2",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 10,
+          "Sub-subject": "O&M Period 3",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 11,
+          "Sub-subject": "O&M Period 4",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 12,
+          "Sub-subject": "O&M Period 5",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 13,
+          "Sub-subject": "O&M Period 6",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 14,
+          "Sub-subject": "Aggregation period 1",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 15,
+          "Sub-subject": "Aggregation period 2",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": "Production & Capacity",
+          "Sub-subject": null,
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 1,
+          "Sub-subject": "WTG type 1",
+          "Input": null,
+          "Unit": "Text",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 2,
+          "Sub-subject": "Number of WTG type 1",
+          "Input": null,
+          "Unit": "#",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 3,
+          "Sub-subject": "Nominal capacity WTG type 1",
+          "Input": null,
+          "Unit": "MW",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 4,
+          "Sub-subject": "Sorégies",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 5,
+          "Sub-subject": "P50",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 6,
+          "Sub-subject": "P75",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 7,
+          "Sub-subject": "P90",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 8,
+          "Sub-subject": "Vendeur",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 9,
+          "Sub-subject": "P50",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 10,
+          "Sub-subject": "P75",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 11,
+          "Sub-subject": "P90",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 12,
+          "Sub-subject": "Improved scenario for CEA",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 13,
+          "Sub-subject": "P50",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 14,
+          "Sub-subject": "P75",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 15,
+          "Sub-subject": "P90",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 16,
+          "Sub-subject": "Selected EYA",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 17,
+          "Sub-subject": "P50",
+          "Input": null,
+          "Unit": "hrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 18,
+          "Sub-subject": "P75",
+          "Input": null,
+          "Unit": "hrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 19,
+          "Sub-subject": "P90",
+          "Input": null,
+          "Unit": "hrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 20,
+          "Sub-subject": "Availability period 1",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 21,
+          "Sub-subject": "Availability period 2",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 22,
+          "Sub-subject": "Outages RTE - 2027",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 23,
+          "Sub-subject": "Outages RTE - 2028",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 24,
+          "Sub-subject": "Outages RTE - 2029",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 25,
+          "Sub-subject": "Outages RTE - 2030",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": "Offtake(s)",
+          "Sub-subject": null,
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 1,
+          "Sub-subject": "PPA price",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 2,
+          "Sub-subject": "K-factor",
+          "Input": null,
+          "Unit": "Coef",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 3,
+          "Sub-subject": "PPA Price adjusted",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 4,
+          "Sub-subject": "Merchant and capacity market",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 5,
+          "Sub-subject": "Market curve(s)",
+          "Input": null,
+          "Unit": "Curve",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 6,
+          "Sub-subject": "Certification rate",
+          "Input": null,
+          "Unit": "%",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 7,
+          "Sub-subject": "Capacity market curve",
+          "Input": null,
+          "Unit": "Curve",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": "Capex & D&A",
+          "Sub-subject": null,
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 1,
+          "Sub-subject": "Development",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 2,
+          "Sub-subject": "Minimum PDA",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": "-"
+        },
+        {
+          "Ref": "5",
+          "Subject": 3,
+          "Sub-subject": "Additional PDA",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": "-"
+        },
+        {
+          "Ref": "5",
+          "Subject": 4,
+          "Sub-subject": "Hard Capex",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 5,
+          "Sub-subject": "WTG + BoP / EPCA (GEN)",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 6,
+          "Sub-subject": "Grid connection",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 7,
+          "Sub-subject": "Soft Capex",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 8,
+          "Sub-subject": "AMO / MOE",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 9,
+          "Sub-subject": "Land leases during Construction",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 10,
+          "Sub-subject": "Compensatory measures",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 11,
+          "Sub-subject": "Picketing, Security & Control Bureau",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 12,
+          "Sub-subject": "TRC Insurance",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 13,
+          "Sub-subject": "Contingencies",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 14,
+          "Sub-subject": "Contingencies",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 15,
+          "Sub-subject": "Financial costs",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 16,
+          "Sub-subject": "Advisors and audit (legal, technical)",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 17,
+          "Sub-subject": "Upfront fees",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 18,
+          "Sub-subject": "Interest during construction",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 19,
+          "Sub-subject": "VAT loan interests",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 20,
+          "Sub-subject": "Total",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 21,
+          "Sub-subject": "Capex / MW",
+          "Input": null,
+          "Unit": "k€/MW",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 22,
+          "Sub-subject": "Provision for dismantling",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 23,
+          "Sub-subject": "Dismantling Provision /WTG",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 24,
+          "Sub-subject": "Provision duration",
+          "Input": null,
+          "Unit": "yrs",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": "Opex",
+          "Sub-subject": null,
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 1,
+          "Sub-subject": "O&M",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 2,
+          "Sub-subject": "O&M contract type (1=max ; 2=sum)",
+          "Input": null,
+          "Unit": "1/2",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 3,
+          "Sub-subject": "O&M fix period 1",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 4,
+          "Sub-subject": "O&M fix period 2",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 5,
+          "Sub-subject": "O&M fix period 3",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 6,
+          "Sub-subject": "O&M fix period 4",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 7,
+          "Sub-subject": "O&M fix period 5",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 8,
+          "Sub-subject": "O&M fix period 6",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 9,
+          "Sub-subject": "O&M variable period 1",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 10,
+          "Sub-subject": "O&M variable period 2",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 11,
+          "Sub-subject": "O&M variable period 3",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 12,
+          "Sub-subject": "O&M variable period 4",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 13,
+          "Sub-subject": "O&M variable period 5",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 14,
+          "Sub-subject": "O&M variable period 6",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 15,
+          "Sub-subject": "Exceptionnal maintenance costs",
+          "Input": null,
+          "Unit": "k€/WTG",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 16,
+          "Sub-subject": "Aggregation costs",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 17,
+          "Sub-subject": "Costs per MWh - period 1",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 18,
+          "Sub-subject": "Costs per MWh - period 2",
+          "Input": null,
+          "Unit": "€/MWh",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 19,
+          "Sub-subject": "TCMA",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 20,
+          "Sub-subject": "TCMA costs fixed",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 21,
+          "Sub-subject": "Fixed",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 22,
+          "Sub-subject": "Land lease",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 23,
+          "Sub-subject": "Insurance",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 24,
+          "Sub-subject": "Energy consumption",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 25,
+          "Sub-subject": "Annual accounts",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 26,
+          "Sub-subject": "Maintenance substation",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 27,
+          "Sub-subject": "Compensatory Measures",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 28,
+          "Sub-subject": "Annual costs",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 29,
+          "Sub-subject": "Costs every 5 years",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 30,
+          "Sub-subject": "Costs yr 1",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 31,
+          "Sub-subject": "Costs yr 2",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 32,
+          "Sub-subject": "Costs yr 3",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 33,
+          "Sub-subject": "Costs yr 4",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 34,
+          "Sub-subject": "Costs yr 5",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 35,
+          "Sub-subject": "Costs yr 10",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 36,
+          "Sub-subject": "Costs yr 15",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 37,
+          "Sub-subject": "Costs yr 20",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 38,
+          "Sub-subject": "Costs yr 25",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 39,
+          "Sub-subject": "Costs yr 30",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 40,
+          "Sub-subject": "Guarantee inspection",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 41,
+          "Sub-subject": "End of guarantee inspection (yr 2)",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 42,
+          "Sub-subject": "Dismantling guarantee",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 43,
+          "Sub-subject": "Dismantling guarantee cost",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 44,
+          "Sub-subject": "BOP maintenance",
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 45,
+          "Sub-subject": "BoP maintenance every 12 yrs",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 46,
+          "Sub-subject": "BoP maintenance every 10 yrs",
+          "Input": null,
+          "Unit": "k€",
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": "Decommissioning Reserve Account",
+          "Sub-subject": null,
+          "Input": null,
+          "Unit": null,
+          "Category": null,
+          "Comments / Risks / Mitigation strategy": null
+        },
+        {
+          "Ref": "5",
+          "Subject": 1,
+          "Sub-subject": "Target amount",
+          "Input": null,
+          "Unit": "k€",
+          "Category": "-",
+          "Comments / Risks / Mitigation strategy": null
+        }
+      ]
+    }
+  ]
+}
