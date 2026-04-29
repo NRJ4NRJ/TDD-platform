@@ -37,7 +37,7 @@ export default function PortalLoginForm() {
       return;
     }
 
-    router.push("/projects");
+    router.push("/dashboard");
     router.refresh();
   }
 
