@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TDD Platform — Connexion</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <style>
     body {
       background-image: url('/sun-sets-renewable-energy-futuristic-landscape-generated-by-ai.jpg');
@@ -65,31 +64,29 @@
   </main>
 
   <script>
-    const SUPABASE_URL = 'https://hftpeymwscjooqnigprc.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmdHBleW13c2Nqb29xbmlncHJjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMzA1MDcsImV4cCI6MjA5MjkwNjUwN30.Tk9hOJjpPsnVKb8K1mTHz8UdmSRtZjEelw6o3dV54wg';
-
-    const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    // Already logged in → go straight to dashboard
-    client.auth.getSession().then(({ data }) => {
-      if (data.session) window.location.href = '/dashboard';
-    });
-
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('submit-btn');
       const errorBox = document.getElementById('error-box');
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
 
       btn.disabled = true;
       btn.textContent = 'Connexion…';
       errorBox.classList.add('hidden');
 
-      const { error } = await client.auth.signInWithPassword({ email, password });
+      const formData = new FormData();
+      formData.append('email', document.getElementById('email').value);
+      formData.append('password', document.getElementById('password').value);
 
-      if (error) {
-        errorBox.textContent = error.message;
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        body: formData,
+        credentials: 'same-origin',
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        errorBox.textContent = data.error || 'Erreur de connexion.';
         errorBox.classList.remove('hidden');
         btn.disabled = false;
         btn.textContent = 'Se connecter';
