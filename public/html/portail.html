@@ -16,23 +16,21 @@
   </style>
 </head>
 <body>
-  <main class="relative min-h-screen flex items-center justify-center px-4">
-    <div class="absolute inset-0 bg-slate-950/65"></div>
+  <main class="min-h-screen flex items-center justify-center px-4">
 
-    <div class="relative z-10 w-full max-w-md px-4 py-10">
-      <div class="bg-white/85 backdrop-blur rounded-[2rem] border border-white/50 shadow-2xl p-10">
+    <div class="w-full max-w-md px-4 py-10">
+      <div class="bg-white/40 backdrop-blur-md rounded-[2rem] border border-white/30 shadow-2xl p-10">
 
         <div class="text-center mb-8">
-          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Accès réservé</p>
-          <h1 class="mt-4 text-4xl font-semibold text-slate-950">Connexion</h1>
-          <p class="mt-2 text-sm text-slate-600">Identifiant unique pris en charge pour le moment.</p>
+          <h1 class="text-4xl font-semibold text-white drop-shadow">Connexion</h1>
+          <p class="mt-2 text-sm text-white/80">Identifiant unique pris en charge pour le moment.</p>
         </div>
 
         <div id="error-box" class="hidden mb-4 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700"></div>
 
         <form id="login-form" class="space-y-5">
           <div>
-            <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Identifiant</label>
+            <label for="email" class="block text-sm font-medium text-white mb-2">Identifiant</label>
             <input
               id="email"
               type="email"
@@ -43,7 +41,7 @@
           </div>
 
           <div>
-            <label for="password" class="block text-sm font-medium text-slate-700 mb-2">Mot de passe</label>
+            <label for="password" class="block text-sm font-medium text-white mb-2">Mot de passe</label>
             <input
               id="password"
               type="password"
