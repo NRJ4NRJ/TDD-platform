@@ -4,64 +4,149 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TDD Platform — Connexion</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
       background-image: url('/sun-sets-renewable-energy-futuristic-landscape-generated-by-ai.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
     }
+
+    .card {
+      width: 100%;
+      max-width: 28rem;
+      background: rgba(255, 255, 255, 0.38);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 2rem;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      padding: 2.5rem;
+    }
+
+    .card-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .error-box {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 1rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: #b91c1c;
+      margin-bottom: 1.25rem;
+    }
+
+    .field { margin-bottom: 1.25rem; }
+
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid #cbd5e1;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    input[readonly] {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    input:not([readonly]) {
+      background: #fff;
+      color: #0f172a;
+    }
+
+    input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      border-radius: 1rem;
+      background: #0f172a;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 0.5rem;
+    }
+
+    button[type="submit"]:hover:not(:disabled) { background: #1e293b; }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
   </style>
 </head>
 <body>
-  <main class="min-h-screen flex items-center justify-center px-4">
-
-    <div class="w-full max-w-md px-4 py-10">
-      <div class="bg-white/40 backdrop-blur-md rounded-[2rem] border border-white/30 shadow-2xl p-10">
-
-        <div class="text-center mb-8">
-          <h1 class="text-4xl font-semibold text-white drop-shadow">Connexion</h1>
-          <p class="mt-2 text-sm text-white/80">Identifiant unique pris en charge pour le moment.</p>
-        </div>
-
-        <div id="error-box" class="hidden mb-4 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700"></div>
-
-        <form id="login-form" class="space-y-5">
-          <div>
-            <label for="email" class="block text-sm font-medium text-white mb-2">Identifiant</label>
-            <input
-              id="email"
-              type="email"
-              value="nicolas.clecoeur@gmail.com"
-              readonly
-              class="w-full rounded-2xl border border-slate-300 bg-slate-100 px-4 py-3 text-sm text-slate-800"
-            />
-          </div>
-
-          <div>
-            <label for="password" class="block text-sm font-medium text-white mb-2">Mot de passe</label>
-            <input
-              id="password"
-              type="password"
-              required
-              class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
-              placeholder="Votre mot de passe"
-            />
-          </div>
-
-          <button
-            id="submit-btn"
-            type="submit"
-            class="w-full rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:opacity-60 disabled:cursor-not-allowed"
-          >
-            Se connecter
-          </button>
-        </form>
-
-      </div>
+  <div class="card">
+    <div class="card-header">
+      <h1>Connexion</h1>
+      <p class="subtitle">Identifiant unique pris en charge pour le moment.</p>
     </div>
-  </main>
+
+    <div id="error-box" class="error-box"></div>
+
+    <form id="login-form">
+      <div class="field">
+        <label for="email">Identifiant</label>
+        <input
+          id="email"
+          type="email"
+          value="nicolas.clecoeur@gmail.com"
+          readonly
+        />
+      </div>
+
+      <div class="field">
+        <label for="password">Mot de passe</label>
+        <input
+          id="password"
+          type="password"
+          required
+          placeholder="Votre mot de passe"
+        />
+      </div>
+
+      <button id="submit-btn" type="submit">Se connecter</button>
+    </form>
+  </div>
 
   <script>
     document.getElementById('login-form').addEventListener('submit', async (e) => {
@@ -71,27 +156,34 @@
 
       btn.disabled = true;
       btn.textContent = 'Connexion…';
-      errorBox.classList.add('hidden');
+      errorBox.style.display = 'none';
 
       const formData = new FormData();
       formData.append('email', document.getElementById('email').value);
       formData.append('password', document.getElementById('password').value);
 
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        body: formData,
-        credentials: 'same-origin',
-      });
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          body: formData,
+          credentials: 'same-origin',
+        });
 
-      const data = await res.json();
+        const data = await res.json();
 
-      if (!res.ok) {
-        errorBox.textContent = data.error || 'Erreur de connexion.';
-        errorBox.classList.remove('hidden');
+        if (!res.ok) {
+          errorBox.textContent = data.error || 'Erreur de connexion.';
+          errorBox.style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = 'Se connecter';
+        } else {
+          window.location.href = '/dashboard';
+        }
+      } catch {
+        errorBox.textContent = 'Impossible de contacter le serveur. Vérifiez votre connexion.';
+        errorBox.style.display = 'block';
         btn.disabled = false;
         btn.textContent = 'Se connecter';
-      } else {
-        window.location.href = '/dashboard';
       }
     });
   </script>
