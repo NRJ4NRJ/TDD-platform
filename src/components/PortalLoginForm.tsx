@@ -71,6 +71,7 @@ export default function PortalLoginForm() {
               type="email"
               value={email}
               readOnly
+              onChange={() => {}}
               className="w-full rounded-2xl border border-slate-300 bg-slate-100 px-4 py-3 text-sm text-slate-800"
             />
           </div>
