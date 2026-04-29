@@ -50,21 +50,21 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
+    <main className="flex min-h-screen items-center justify-center bg-[linear-gradient(180deg,rgba(15,23,42,0.18),rgba(15,23,42,0.62)),url('/sun-sets-renewable-energy-futuristic-landscape-generated-by-ai.jpg')] bg-cover bg-center bg-no-repeat px-4">
       <div className="w-full max-w-md">
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 space-y-6">
+        <div className="space-y-6 rounded-2xl border border-white/30 bg-white/45 p-8 shadow-2xl backdrop-blur-md">
           <div className="text-center space-y-1">
-            <Link href="/" className="text-2xl font-bold text-slate-900">
+            <Link href="/" className="text-2xl font-bold text-white drop-shadow">
               TDD Platform
             </Link>
-            <p className="text-sm text-slate-500">Connexion à votre espace</p>
+            <p className="text-sm text-white/85">Connexion à votre espace</p>
           </div>
 
           {magicSent ? (
             <div className="text-center space-y-3 py-4">
               <div className="text-4xl">✉️</div>
-              <p className="font-medium text-slate-800">Lien envoyé !</p>
-              <p className="text-sm text-slate-500">
+              <p className="font-medium text-white">Lien envoyé !</p>
+              <p className="text-sm text-white/85">
                 Vérifiez votre boîte mail <strong>{email}</strong> et cliquez
                 sur le lien de connexion.
               </p>
@@ -80,7 +80,7 @@ export default function LoginPage() {
               {mode === "password" ? (
                 <form onSubmit={handlePasswordLogin} className="space-y-4">
                   <div>
-                    <label htmlFor="login-email" className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="login-email" className="block text-sm font-medium text-white mb-1">
                       Email
                     </label>
                     <input
@@ -94,7 +94,7 @@ export default function LoginPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="login-password" className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="login-password" className="block text-sm font-medium text-white mb-1">
                       Mot de passe
                     </label>
                     <input
@@ -109,7 +109,7 @@ export default function LoginPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
+                    className="w-full bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
                   >
                     {loading ? "Connexion…" : "Se connecter"}
                   </button>
@@ -117,7 +117,7 @@ export default function LoginPage() {
               ) : (
                 <form onSubmit={handleMagicLink} className="space-y-4">
                   <div>
-                    <label htmlFor="magic-email" className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="magic-email" className="block text-sm font-medium text-white mb-1">
                       Email
                     </label>
                     <input
@@ -133,7 +133,7 @@ export default function LoginPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
+                    className="w-full bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
                   >
                     {loading ? "Envoi…" : "Recevoir un lien magique"}
                   </button>
@@ -145,7 +145,7 @@ export default function LoginPage() {
                   onClick={() =>
                     setMode(mode === "password" ? "magic" : "password")
                   }
-                  className="text-xs text-slate-500 hover:text-blue-600 underline"
+                  className="text-xs text-white/80 underline hover:text-white"
                 >
                   {mode === "password"
                     ? "Connexion par lien magique (sans mot de passe)"
