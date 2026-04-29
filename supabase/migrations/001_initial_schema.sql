@@ -23,6 +23,17 @@ create type public.risk_rating as enum ('green', 'blue', 'yellow', 'orange', 're
 create type public.project_type as enum ('wind', 'solar', 'hydro', 'storage', 'other');
 create type public.project_status as enum ('development', 'construction', 'operation');
 
+create or replace function public.risk_rating_score(rating public.risk_rating)
+returns int as $$
+  select case rating
+    when 'red' then 1
+    when 'orange' then 2
+    when 'yellow' then 3
+    when 'blue' then 4
+    when 'green' then 5
+  end;
+$$ language sql immutable strict;
+
 -- ============================================================
 -- profiles: extends auth.users
 -- ============================================================
@@ -170,6 +181,20 @@ create policy "Users can manage risk items for their projects"
         and p.user_id = auth.uid()
     )
   );
+
+create view public.risk_assessments_with_scores
+with (security_invoker = true) as
+select
+  risk_assessments.*,
+  public.risk_rating_score(risk_assessments.rating) as rating_score
+from public.risk_assessments;
+
+create view public.risk_items_with_scores
+with (security_invoker = true) as
+select
+  risk_items.*,
+  public.risk_rating_score(risk_items.rating) as rating_score
+from public.risk_items;
 
 -- ============================================================
 -- updated_at triggers

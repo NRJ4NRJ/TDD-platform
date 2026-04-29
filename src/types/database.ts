@@ -185,10 +185,63 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      risk_assessments_with_scores: {
+        Row: {
+          category_id: string | null
+          created_at: string | null
+          id: string | null
+          project_id: string | null
+          rating: Database["public"]["Enums"]["risk_rating"] | null
+          rating_score: number | null
+          summary: string | null
+          updated_at: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "risk_assessments_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "risk_categories"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "risk_assessments_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      risk_items_with_scores: {
+        Row: {
+          assessment_id: string | null
+          created_at: string | null
+          description: string | null
+          id: string | null
+          rating: Database["public"]["Enums"]["risk_rating"] | null
+          rating_score: number | null
+          title: string | null
+          updated_at: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "risk_items_assessment_id_fkey"
+            columns: ["assessment_id"]
+            isOneToOne: false
+            referencedRelation: "risk_assessments"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Functions: {
-      [_ in never]: never
+      risk_rating_score: {
+        Args: {
+          rating: Database["public"]["Enums"]["risk_rating"]
+        }
+        Returns: number
+      }
     }
     Enums: {
       project_status: "development" | "construction" | "operation"
@@ -330,5 +383,6 @@ export const Constants = {
 
 // Convenience aliases used throughout the app
 export type RiskRating = Database["public"]["Enums"]["risk_rating"]
+export type RiskRatingScore = 1 | 2 | 3 | 4 | 5
 export type ProjectType = Database["public"]["Enums"]["project_type"]
 export type ProjectStatus = Database["public"]["Enums"]["project_status"]
