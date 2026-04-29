@@ -1,10 +1,12 @@
-function getEnvVar(name: string): string {
-  const value = process.env[name];
-  if (!value) throw new Error(`Variable d'environnement manquante : ${name}`);
-  return value;
-}
-
 export const env = {
-  get supabaseUrl(): string { return getEnvVar("NEXT_PUBLIC_SUPABASE_URL"); },
-  get supabaseAnonKey(): string { return getEnvVar("NEXT_PUBLIC_SUPABASE_ANON_KEY"); },
+  get supabaseUrl(): string {
+    const value = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    if (!value) throw new Error("Variable d'environnement manquante : NEXT_PUBLIC_SUPABASE_URL");
+    return value;
+  },
+  get supabaseAnonKey(): string {
+    const value = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (!value) throw new Error("Variable d'environnement manquante : NEXT_PUBLIC_SUPABASE_ANON_KEY");
+    return value;
+  },
 };
