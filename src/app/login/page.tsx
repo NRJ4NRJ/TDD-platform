@@ -52,19 +52,19 @@ export default function LoginPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[linear-gradient(180deg,rgba(15,23,42,0.18),rgba(15,23,42,0.62)),url('/sun-sets-renewable-energy-futuristic-landscape-generated-by-ai.jpg')] bg-cover bg-center bg-no-repeat px-4">
       <div className="w-full max-w-md">
-        <div className="space-y-6 rounded-2xl border border-white/30 bg-white/45 p-8 shadow-2xl backdrop-blur-md">
+        <div className="space-y-6 rounded-2xl border border-white/40 bg-white/75 p-8 shadow-2xl backdrop-blur-md">
           <div className="text-center space-y-1">
-            <Link href="/" className="text-2xl font-bold text-white drop-shadow">
+            <Link href="/" className="text-2xl font-bold text-slate-950">
               TDD Platform
             </Link>
-            <p className="text-sm text-white/85">Connexion à votre espace</p>
+            <p className="text-sm text-slate-700">Connexion à votre espace</p>
           </div>
 
           {magicSent ? (
             <div className="text-center space-y-3 py-4">
               <div className="text-4xl">✉️</div>
-              <p className="font-medium text-white">Lien envoyé !</p>
-              <p className="text-sm text-white/85">
+              <p className="font-medium text-slate-900">Lien envoyé !</p>
+              <p className="text-sm text-slate-700">
                 Vérifiez votre boîte mail <strong>{email}</strong> et cliquez
                 sur le lien de connexion.
               </p>
@@ -80,7 +80,7 @@ export default function LoginPage() {
               {mode === "password" ? (
                 <form onSubmit={handlePasswordLogin} className="space-y-4">
                   <div>
-                    <label htmlFor="login-email" className="block text-sm font-medium text-white mb-1">
+                    <label htmlFor="login-email" className="block text-sm font-medium text-slate-900 mb-1">
                       Email
                     </label>
                     <input
@@ -89,12 +89,12 @@ export default function LoginPage() {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full rounded-lg border border-slate-300 bg-white/95 px-3 py-2.5 text-sm text-slate-950 caret-slate-950 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="vous@exemple.com"
                     />
                   </div>
                   <div>
-                    <label htmlFor="login-password" className="block text-sm font-medium text-white mb-1">
+                    <label htmlFor="login-password" className="block text-sm font-medium text-slate-900 mb-1">
                       Mot de passe
                     </label>
                     <input
@@ -103,7 +103,7 @@ export default function LoginPage() {
                       required
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full rounded-lg border border-slate-300 bg-white/95 px-3 py-2.5 text-sm text-slate-950 caret-slate-950 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                   <button
@@ -117,7 +117,7 @@ export default function LoginPage() {
               ) : (
                 <form onSubmit={handleMagicLink} className="space-y-4">
                   <div>
-                    <label htmlFor="magic-email" className="block text-sm font-medium text-white mb-1">
+                    <label htmlFor="magic-email" className="block text-sm font-medium text-slate-900 mb-1">
                       Email
                     </label>
                     <input
@@ -126,7 +126,7 @@ export default function LoginPage() {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full rounded-lg border border-slate-300 bg-white/95 px-3 py-2.5 text-sm text-slate-950 caret-slate-950 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="vous@exemple.com"
                     />
                   </div>
@@ -145,7 +145,7 @@ export default function LoginPage() {
                   onClick={() =>
                     setMode(mode === "password" ? "magic" : "password")
                   }
-                  className="text-xs text-white/80 underline hover:text-white"
+                  className="text-xs text-slate-700 underline hover:text-slate-950"
                 >
                   {mode === "password"
                     ? "Connexion par lien magique (sans mot de passe)"
