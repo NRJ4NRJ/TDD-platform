@@ -80,10 +80,11 @@ export default function LoginPage() {
               {mode === "password" ? (
                 <form onSubmit={handlePasswordLogin} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="login-email" className="block text-sm font-medium text-slate-700 mb-1">
                       Email
                     </label>
                     <input
+                      id="login-email"
                       type="email"
                       required
                       value={email}
@@ -93,10 +94,11 @@ export default function LoginPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="login-password" className="block text-sm font-medium text-slate-700 mb-1">
                       Mot de passe
                     </label>
                     <input
+                      id="login-password"
                       type="password"
                       required
                       value={password}
@@ -115,10 +117,11 @@ export default function LoginPage() {
               ) : (
                 <form onSubmit={handleMagicLink} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">
+                    <label htmlFor="magic-email" className="block text-sm font-medium text-slate-700 mb-1">
                       Email
                     </label>
                     <input
+                      id="magic-email"
                       type="email"
                       required
                       value={email}
