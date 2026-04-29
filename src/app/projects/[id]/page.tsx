@@ -2,6 +2,8 @@ import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import RiskAnalysisEditor from "@/components/RiskAnalysisEditor";
+import RiskRadarChart from "@/components/RiskRadarChart";
+import { getRiskRatingScore } from "@/lib/risk-score";
 import type { RiskRating } from "@/types/database";
 
 type Category = {
@@ -80,6 +82,24 @@ export default async function ProjectDetailPage(props: any) {
 
   const categories = (rawCategories ?? []) as Category[];
 
+  const categoryScores = categories.map((category) => {
+    const assessment = assessments.find((item) => item.category_id === category.id);
+    const itemScores =
+      assessment?.risk_items.map((item) =>
+        getRiskRatingScore(item.rating as RiskRating)
+      ) ?? [];
+    const score =
+      itemScores.length > 0
+        ? itemScores.reduce((sum, itemScore) => sum + itemScore, 0) / itemScores.length
+        : null;
+
+    return {
+      id: category.id,
+      label: `${category.display_order}. ${category.name}`,
+      score,
+    };
+  });
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -106,32 +126,43 @@ export default async function ProjectDetailPage(props: any) {
 
       {/* Risk matrix summary */}
       <div className="bg-white rounded-xl border border-slate-200 p-5">
-        <h2 className="text-sm font-semibold text-slate-700 mb-4">
-          Matrice des risques
-        </h2>
+        <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-sm font-semibold text-slate-700">
+              Matrice des risques
+            </h2>
+            <p className="text-xs text-slate-500">
+              Score moyen par catégorie, calculé à partir des sous-catégories évaluées.
+            </p>
+          </div>
+          <span className="text-xs font-medium text-slate-400">1 = bloquant · 5 = concluant</span>
+        </div>
         {categories && categories.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {categories.map((cat) => {
-              const assessment = assessments.find(
-                (a) => a.category_id === cat.id
-              );
-              const rating = assessment?.rating as RiskRating | undefined;
-              return (
-                <div
-                  key={cat.id}
-                  className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100"
-                >
+          <div className="space-y-5">
+            <RiskRadarChart categories={categoryScores} />
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {categories.map((cat) => {
+                const assessment = assessments.find(
+                  (a) => a.category_id === cat.id
+                );
+                const rating = assessment?.rating as RiskRating | undefined;
+                return (
                   <div
-                    className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${
-                      rating ? ratingDotClass[rating] : "bg-slate-300"
-                    }`}
-                  />
-                  <span className="text-xs font-medium text-slate-700 truncate">
-                    {cat.display_order}. {cat.name}
-                  </span>
-                </div>
-              );
-            })}
+                    key={cat.id}
+                    className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-100"
+                  >
+                    <div
+                      className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${
+                        rating ? ratingDotClass[rating] : "bg-slate-300"
+                      }`}
+                    />
+                    <span className="text-xs font-medium text-slate-700 truncate">
+                      {cat.display_order}. {cat.name}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ) : (
           <p className="text-sm text-slate-400">Chargement des catégories…</p>
