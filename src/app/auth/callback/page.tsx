@@ -15,7 +15,7 @@ export default function AuthCallbackPage() {
 
       if (error) {
         setMessage("La connexion a échoué. Redirection vers la page de connexion...");
-        router.replace("/login?error=auth_callback_failed");
+        router.replace("/");
         return;
       }
 
@@ -25,7 +25,7 @@ export default function AuthCallbackPage() {
       }
 
       setMessage("Aucune session détectée. Redirection vers la page de connexion...");
-      router.replace("/login?error=auth_callback_failed");
+      router.replace("/");
     }
 
     handleRedirect();
