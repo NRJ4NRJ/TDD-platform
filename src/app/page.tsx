@@ -9,5 +9,5 @@ export default async function Home() {
 
   if (user) redirect("/dashboard");
 
-  redirect("/html/portail.html");
+  redirect("/login");
 }

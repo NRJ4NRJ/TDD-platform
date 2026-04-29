@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import LogoutButton from "@/components/LogoutButton";
+import AppHeader from "@/components/AppHeader";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -17,17 +17,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-xl font-bold text-slate-900">TDD Platform</h1>
-          <p className="text-xs text-slate-500">Analyse des risques EnR</p>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="text-sm text-slate-600">{user.email}</span>
-          <LogoutButton />
-        </div>
-      </header>
+      <AppHeader email={user.email} />
 
       <main className="max-w-6xl mx-auto px-6 py-10 space-y-8">
         <div>

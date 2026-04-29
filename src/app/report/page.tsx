@@ -38,12 +38,20 @@ export default function ReportIndexPage() {
             Navigation par onglet du classeur Excel. Cette vue expose les onglets disponibles et permet de consulter chaque feuille comme une page de la plateforme.
           </p>
         </div>
-        <Link
-          href="/projects"
-          className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
-        >
-          Retour au portefeuille
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/dashboard"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+          >
+            Tableau de bord
+          </Link>
+          <Link
+            href="/projects"
+            className="inline-flex items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            Portefeuille
+          </Link>
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

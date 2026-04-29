@@ -45,6 +45,12 @@ export default function ReportSheetPage(props: any) {
         </div>
         <div className="flex flex-wrap gap-3">
           <Link
+            href="/dashboard"
+            className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+          >
+            Tableau de bord
+          </Link>
+          <Link
             href="/report"
             className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
           >

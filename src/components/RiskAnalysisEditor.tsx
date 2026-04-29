@@ -41,11 +41,11 @@ type CategoryState = {
 };
 
 const ratingLabels: Record<RiskRating, string> = {
-  green: "Vert",
-  blue: "Bleu",
-  yellow: "Jaune",
-  orange: "Orange",
-  red: "Rouge",
+  green: "Concluant",
+  blue: "Remarque mineure",
+  yellow: "Réserve, statut à vérifier",
+  orange: "Risque significatif",
+  red: "Point bloquant",
 };
 
 const ratingDotClass: Record<RiskRating, string> = {

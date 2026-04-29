@@ -1,11 +1,11 @@
 import type { RiskRating } from "@/types/database";
 
 const labels: Record<RiskRating, string> = {
-  green: "Vert",
-  blue: "Bleu",
-  yellow: "Jaune",
-  orange: "Orange",
-  red: "Rouge",
+  green: "Concluant",
+  blue: "Remarque mineure",
+  yellow: "Réserve, statut à vérifier",
+  orange: "Risque significatif",
+  red: "Point bloquant",
 };
 
 const classes: Record<RiskRating, string> = {
