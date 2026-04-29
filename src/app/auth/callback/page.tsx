@@ -20,7 +20,7 @@ export default function AuthCallbackPage() {
       }
 
       if (data?.session) {
-        router.replace("/projects");
+        router.replace("/dashboard");
         return;
       }
 

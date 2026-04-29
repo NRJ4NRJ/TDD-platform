@@ -8,7 +8,7 @@ export default async function Home() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (user) redirect("/projects");
+  if (user) redirect("/dashboard");
 
   return (
     <main className="relative min-h-screen flex items-center justify-center px-4">
