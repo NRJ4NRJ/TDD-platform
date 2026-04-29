@@ -64,10 +64,11 @@ export default function PortalLoginForm() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
               Identifiant
             </label>
             <input
+              id="email"
               type="email"
               value={email}
               readOnly
@@ -77,10 +78,11 @@ export default function PortalLoginForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label htmlFor="password" className="block text-sm font-medium text-slate-700 mb-2">
               Mot de passe
             </label>
             <input
+              id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
