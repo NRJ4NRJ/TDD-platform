@@ -48,8 +48,8 @@ function buildLocation(metadata: Record<string, string | number>) {
 }
 
 function buildTitle(row: Record<string, string | number | null>) {
-  const subject = row.Subject ?? row.Subject;
-  const subSubject = row["Sub-subject"] ?? row["Sub-subject"];
+  const subject = row.Subject ?? row["Subject"];
+  const subSubject = row["Sub-subject"] ?? row["sub-subject"];
   const comments = row["Comments / Risks / Mitigation strategy"] ?? row.Description;
 
   const pieces = [subject, subSubject]
