@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import RiskBadge from "@/components/RiskBadge";
+import RiskAnalysisEditor from "@/components/RiskAnalysisEditor";
 import type { RiskRating } from "@/types/database";
 
 type Category = {
@@ -80,9 +80,6 @@ export default async function ProjectDetailPage(props: any) {
 
   const categories = (rawCategories ?? []) as Category[];
 
-  const assessedIds = new Set(assessments.map((a) => a.category_id));
-  const missingCategories = categories.filter((c) => !assessedIds.has(c.id));
-
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -130,7 +127,7 @@ export default async function ProjectDetailPage(props: any) {
                     }`}
                   />
                   <span className="text-xs font-medium text-slate-700 truncate">
-                    {cat.name}
+                    {cat.display_order}. {cat.name}
                   </span>
                 </div>
               );
@@ -141,82 +138,17 @@ export default async function ProjectDetailPage(props: any) {
         )}
       </div>
 
-      {/* Assessments detail */}
-      <div className="space-y-4">
-        <h2 className="text-lg font-semibold text-slate-800">
-          Détail par catégorie
-        </h2>
-
-        {assessments.length > 0 ? (
-          assessments.map((assessment) => (
-            <div
-              key={assessment.id}
-              className="bg-white rounded-xl border border-slate-200 p-5 space-y-3"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-slate-800">
-                  {assessment.risk_categories?.name ?? "—"}
-                </h3>
-                <RiskBadge rating={assessment.rating as RiskRating} />
-              </div>
-              {assessment.summary && (
-                <p className="text-sm text-slate-600">{assessment.summary}</p>
-              )}
-              {assessment.risk_items.length > 0 && (
-                <div className="space-y-2 pt-2 border-t border-slate-100">
-                  {assessment.risk_items.map((item) => (
-                    <div
-                      key={item.id}
-                      className="flex items-start gap-2.5 text-sm"
-                    >
-                      <div
-                        className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
-                          ratingDotClass[item.rating as RiskRating]
-                        }`}
-                      />
-                      <div>
-                        <span className="font-medium text-slate-700">
-                          {item.title}
-                        </span>
-                        {item.description && (
-                          <p className="text-slate-500 text-xs mt-0.5">
-                            {item.description}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))
-        ) : (
-          <div className="text-center py-12 text-slate-400">
-            <p className="text-sm">Aucune analyse de risques saisie.</p>
-            <p className="text-xs mt-1">
-              Les catégories ci-dessus seront complétées lors de la TDD.
-            </p>
-          </div>
-        )}
-
-        {missingCategories.length > 0 && (
-          <div className="bg-slate-50 rounded-xl border border-dashed border-slate-200 p-5">
-            <p className="text-xs font-medium text-slate-500 mb-2">
-              Catégories non encore évaluées ({missingCategories.length})
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {missingCategories.map((cat) => (
-                <span
-                  key={cat.id}
-                  className="text-xs bg-white border border-slate-200 text-slate-500 px-2.5 py-1 rounded-full"
-                >
-                  {cat.name}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+      <RiskAnalysisEditor
+        projectId={project.id}
+        categories={categories}
+        assessments={assessments.map((assessment) => ({
+          id: assessment.id,
+          rating: assessment.rating,
+          summary: assessment.summary,
+          category_id: assessment.category_id,
+          risk_items: assessment.risk_items,
+        }))}
+      />
     </div>
   );
 }

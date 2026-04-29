@@ -108,12 +108,14 @@ export default function ImportReportPreview({ report }: { report: ImportedReport
           </div>
 
           <div className="rounded-xl border border-slate-200 bg-white p-6">
-            <h2 className="text-lg font-semibold text-slate-900">Sections importées</h2>
+            <h2 className="text-lg font-semibold text-slate-900">Structure indicative</h2>
             <div className="mt-4 space-y-2">
               {validSections.map((section) => (
                 <div key={section.sheet_name} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
                   <p className="text-sm font-medium text-slate-700">{section.sheet_name}</p>
-                  <p className="text-xs text-slate-500">{section.rows.length} éléments</p>
+                  <p className="text-xs text-slate-500">
+                    {section.rows.length} lignes repérées, non préremplies dans l'analyse
+                  </p>
                 </div>
               ))}
             </div>
@@ -154,7 +156,7 @@ export default function ImportReportPreview({ report }: { report: ImportedReport
               disabled={isLoading}
               className="w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:opacity-50"
             >
-              {isLoading ? "Importation..." : "Importer le rapport dans la plateforme"}
+              {isLoading ? "Importation..." : "Créer le projet avec une analyse vide"}
             </button>
           </div>
         </div>
